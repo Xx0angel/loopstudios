@@ -1,0 +1,315 @@
+$count-hours: 7hrs;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark__gray: hsl(0, 0%, 55%);
+$very__dark-gray: hsl(0, 0%, 41%);
+$font__principal: "Alata", sans-serif;
+$font__titulos: "Josefin Sans", sans-serif;
+
+// Presentacion
+
+header {
+    width: 100%;
+    height: 650px;
+    background-image: url(img/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+}
+
+.contenedor {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    padding: 50px;
+}
+
+.mobile,
+.mobile__burguer{
+    display: none;
+}
+
+.navegacion__lista-item {
+    display: inline;
+    margin: 0 20px 0 0;
+    padding: 5px 0;
+    font-family: $font__titulos;
+    font-weight: 300;
+    font-size: 1em;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.navegacion__lista-item:hover {
+    border-bottom: 1px solid $white;
+}
+
+.navegacion__lista-link {
+    text-decoration: none;
+    color: $white;
+}
+
+.banner__contenedor {
+    position: absolute;
+    padding: 40px 60px;
+    top: 25%;
+    left: 10%;
+    width: 680px;
+    height: 280px;
+    border: 1px solid $white;
+    .banner__titulo {
+        color: $white;
+        font-family: $font__titulos;
+        font-size: 4.3em;
+    }
+}
+
+.banner--uppercase,
+.vr__titulo-uppercase {
+    text-transform: uppercase;
+}
+
+// Interaccion VR
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+.vr {
+    width: 100%;
+    min-height: 70vh;
+    padding: 100px 0 0 0;
+    margin: 0 0 100px 0;
+}
+
+.vr__contenedor-img {
+    width: 64%;
+    .vr__imagen {
+        width: 100%;
+    }
+}
+
+.vr__descripcion-contenedor {
+    position: absolute;
+    right: 150px;
+    bottom: -38%;
+    background-color: $white;
+    width: 40%;
+    height: auto;
+    padding: 5% 4%;
+    color: $black;
+
+    .vr__descripcion {
+        font-family: $font__principal;
+        font-size: 1em;
+        font-weight: 400;
+    }
+}
+.vr__titulo {
+    font-family: $font__titulos;
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+// Nuestras creaciones
+.creaciones {
+    margin-bottom: 150px;
+}
+.creaciones__contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 70px 0;
+    .creaciones__titulo {
+        font-family: $font__titulos;
+        font-size: 2.5em;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
+
+.boton {
+    width: 150px;
+    height: 50px;
+    background-color: $white;
+    color: $black;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+.boton:hover {
+    background-color: $black;
+    color: white;
+}
+.boton1 {
+    visibility: visible;
+}
+.boton2 {
+    visibility: hidden;
+}
+.creaciones__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 256px);
+    gap: 20px;
+    justify-content: center;
+    .creaciones__background {
+        width: 256px;
+        height: 450px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+        -moz-transition: 0.5s ease;
+        -ms-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+    }
+    .creaciones__grid-item {
+        width: 256px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .creaciones__grid-titulo {
+        display: inline-block;
+        width: 190px;
+        position: absolute;
+        z-index: 21;
+        margin: 30px;
+        font-family: $font__titulos;
+        font-weight: 300;
+        font-size: 2em;
+        color: $white;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+        -moz-transition: 0.5s ease;
+        -ms-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+    }
+
+    .creaciones__grid-item:hover {
+        .creaciones__grid-titulo {
+            color: $black;
+        }
+        .creaciones__background {
+            filter: opacity(20%);
+            -webkit-filter: opacity(20%);
+        }
+    }
+}
+
+.creaciones__background-earth {
+    background: no-repeat url(img/desktop/image-deep-earth.jpg);
+}
+
+.creaciones__background-night {
+    background: no-repeat url(img/desktop/image-night-arcade.jpg);
+}
+.creaciones__background-soccer {
+    background: no-repeat url(img/desktop/image-soccer-team.jpg);
+}
+.creaciones__background-grid {
+    background: no-repeat url(img/desktop/image-grid.jpg);
+}
+.creaciones__background-vr {
+    background: no-repeat url(img/desktop/image-from-above.jpg);
+}
+.creaciones__background-pocket {
+    background: no-repeat url(img/desktop/image-pocket-borealis.jpg);
+}
+.creaciones__background-curiosity {
+    background: no-repeat url(img/desktop/image-curiosity.jpg);
+}
+.creaciones__background-fisheye {
+    background: no-repeat url(img/desktop/image-fisheye.jpg);
+}
+
+// Footer
+
+footer {
+    width: 100%;
+    background-color: $black;
+    color: $white;
+}
+
+.sociales__contenedor {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px 25px 20px;
+    .sociales__link {
+        padding: 8px;
+        transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+        -moz-transition: 0.5s ease;
+        -ms-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+        .sociales__icon {
+            color: $white;
+            font-size: 25px;
+        }
+    }
+    .sociales__link:hover {
+        border-bottom: 1px solid $white;
+    }
+}
+
+.sociales__lista {
+    margin-top: 25px;
+}
+.copy {
+    width: 80%;
+    margin: 0 auto;
+    padding: 25px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .copy__navegacion {
+        margin-bottom: 50px;
+        .copy__link {
+            display: inline-block;
+            font-family: $font__principal;
+            font-size: 1em;
+            font-weight: 400;
+            margin-right: 20px;
+            color: $white;
+            text-decoration: none;
+            padding: 5px;
+            transition: 0.5s ease;
+            -webkit-transition: 0.5s ease;
+            -moz-transition: 0.5s ease;
+            -ms-transition: 0.5s ease;
+            -o-transition: 0.5s ease;
+            text-align: center;
+        }
+        .copy__link:hover {
+            border-bottom: 1px solid white;
+        }
+    }
+    .copy__copyright {
+        color: $dark__gray;
+    }
+    .copy__icon {
+        font-size: 15px;
+    }
+    .copy__derechos {
+        font-family: $font__principal;
+        font-size: 15px;
+    }
+}
+
+@import "mobile";
